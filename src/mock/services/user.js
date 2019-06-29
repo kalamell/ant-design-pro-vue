@@ -5,7 +5,7 @@ const info = (options) => {
   console.log('options', options)
   const userInfo = {
     'id': '4291d7da9005377ec9aec4a71ea837f',
-    'name': '天野远子',
+    'name': 'บัณฑิต',
     'username': 'admin',
     'password': '',
     'avatar': '/avatar2.jpg',
@@ -23,8 +23,8 @@ const info = (options) => {
   // role
   const roleObj = {
     'id': 'admin',
-    'name': '管理员',
-    'describe': '拥有所有权限',
+    'name': 'บัณฑิต',
+    'describe': 'อิหยังหว่า',
     'status': 1,
     'creatorId': 'system',
     'createTime': 1497160610259,

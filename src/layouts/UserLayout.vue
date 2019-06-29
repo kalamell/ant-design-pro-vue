@@ -4,12 +4,12 @@
       <div class="top">
         <div class="header">
           <a href="/">
-            <img src="~@/assets/logo.svg" class="logo" alt="logo">
-            <span class="title">Ant Design</span>
+            <!--<img src="~@/assets/logo.svg" class="logo" alt="logo">-->
+            <span class="title">HR STOCK v2</span>
           </a>
         </div>
         <div class="desc">
-          Ant Design 是西湖区最具影响力的 Web 设计规范
+          กรุณากรอกข้อมูลเพื่อเข้าระบบ
         </div>
       </div>
 
@@ -17,12 +17,12 @@
 
       <div class="footer">
         <div class="links">
-          <a href="_self">帮助</a>
-          <a href="_self">隐私</a>
-          <a href="_self">条款</a>
+          <a href="https://www.facebook.com/hrstock/">Facebook Page HRSTOCK</a>
+          <a href="https://www.facebook.com/hrstock/">LINE@</a>
+          
         </div>
         <div class="copyright">
-          Copyright &copy; 2018 白鹭学园技术组出品
+          Template BY <a href="https://vue.ant.design">https://vue.ant.design</a>
         </div>
       </div>
     </div>

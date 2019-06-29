@@ -8,7 +8,7 @@ export const asyncRouterMap = [
     path: '/',
     name: 'index',
     component: BasicLayout,
-    meta: { title: '首页' },
+    meta: { title: 'หน้าหลัก' },
     redirect: '/dashboard/workplace',
     children: [
       // dashboard
@@ -17,25 +17,19 @@ export const asyncRouterMap = [
         name: 'dashboard',
         redirect: '/dashboard/workplace',
         component: RouteView,
-        meta: { title: '仪表盘', keepAlive: true, icon: bxAnaalyse, permission: [ 'dashboard' ] },
+        meta: { title: 'Dashbaord', keepAlive: true, icon: bxAnaalyse, permission: [ 'dashboard' ] },
         children: [
           {
             path: '/dashboard/analysis',
             name: 'Analysis',
             component: () => import('@/views/dashboard/Analysis'),
-            meta: { title: '分析页', keepAlive: false, permission: [ 'dashboard' ] }
-          },
-          // 外部链接
-          {
-            path: 'https://www.baidu.com/',
-            name: 'Monitor',
-            meta: { title: '监控页（外部）', target: '_blank' }
+            meta: { title: 'ข้อมูลสถิติ', keepAlive: false, permission: [ 'dashboard' ] }
           },
           {
             path: '/dashboard/workplace',
             name: 'Workplace',
             component: () => import('@/views/dashboard/Workplace'),
-            meta: { title: '工作台', keepAlive: true, permission: [ 'dashboard' ] }
+            meta: { title: 'Dashboard', keepAlive: true, permission: [ 'dashboard' ] }
           }
         ]
       },
@@ -45,25 +39,25 @@ export const asyncRouterMap = [
         path: '/form',
         redirect: '/form/base-form',
         component: PageView,
-        meta: { title: '表单页', icon: 'form', permission: [ 'form' ] },
+        meta: { title: 'ฟอร์ม', icon: 'form', permission: [ 'form' ] },
         children: [
           {
             path: '/form/base-form',
             name: 'BaseForm',
             component: () => import('@/views/form/BasicForm'),
-            meta: { title: '基础表单', keepAlive: true, permission: [ 'form' ] }
+            meta: { title: 'ฟอร์มทั่วไป', keepAlive: true, permission: [ 'form' ] }
           },
           {
             path: '/form/step-form',
             name: 'StepForm',
             component: () => import('@/views/form/stepForm/StepForm'),
-            meta: { title: '分步表单', keepAlive: true, permission: [ 'form' ] }
+            meta: { title: 'Step form', keepAlive: true, permission: [ 'form' ] }
           },
           {
             path: '/form/advanced-form',
             name: 'AdvanceForm',
             component: () => import('@/views/form/advancedForm/AdvancedForm'),
-            meta: { title: '高级表单', keepAlive: true, permission: [ 'form' ] }
+            meta: { title: 'Advance Form', keepAlive: true, permission: [ 'form' ] }
           }
         ]
       },
@@ -74,51 +68,51 @@ export const asyncRouterMap = [
         name: 'list',
         component: PageView,
         redirect: '/list/table-list',
-        meta: { title: '列表页', icon: 'table', permission: [ 'table' ] },
+        meta: { title: 'List', icon: 'table', permission: [ 'table' ] },
         children: [
           {
             path: '/list/table-list/:pageNo([1-9]\\d*)?',
             name: 'TableListWrapper',
             hideChildrenInMenu: true, // 强制显示 MenuItem 而不是 SubMenu
             component: () => import('@/views/list/TableList'),
-            meta: { title: '查询表格', keepAlive: true, permission: [ 'table' ] }
+            meta: { title: 'Table List', keepAlive: true, permission: [ 'table' ] }
           },
           {
             path: '/list/basic-list',
             name: 'BasicList',
             component: () => import('@/views/list/StandardList'),
-            meta: { title: '标准列表', keepAlive: true, permission: [ 'table' ] }
+            meta: { title: 'Basic List', keepAlive: true, permission: [ 'table' ] }
           },
           {
             path: '/list/card',
             name: 'CardList',
             component: () => import('@/views/list/CardList'),
-            meta: { title: '卡片列表', keepAlive: true, permission: [ 'table' ] }
+            meta: { title: 'Card List', keepAlive: true, permission: [ 'table' ] }
           },
           {
             path: '/list/search',
             name: 'SearchList',
             component: () => import('@/views/list/search/SearchLayout'),
             redirect: '/list/search/article',
-            meta: { title: '搜索列表', keepAlive: true, permission: [ 'table' ] },
+            meta: { title: 'Search', keepAlive: true, permission: [ 'table' ] },
             children: [
               {
                 path: '/list/search/article',
                 name: 'SearchArticles',
                 component: () => import('../views/list/search/Article'),
-                meta: { title: '搜索列表（文章）', permission: [ 'table' ] }
+                meta: { title: 'ค้นหาบทความ', permission: [ 'table' ] }
               },
               {
                 path: '/list/search/project',
                 name: 'SearchProjects',
                 component: () => import('../views/list/search/Projects'),
-                meta: { title: '搜索列表（项目）', permission: [ 'table' ] }
+                meta: { title: 'ค้นหาโปรเจ็ค', permission: [ 'table' ] }
               },
               {
                 path: '/list/search/application',
                 name: 'SearchApplications',
                 component: () => import('../views/list/search/Applications'),
-                meta: { title: '搜索列表（应用）', permission: [ 'table' ] }
+                meta: { title: 'ค้นหา Application', permission: [ 'table' ] }
               }
             ]
           }

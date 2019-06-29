@@ -197,11 +197,11 @@ export default {
     // eslint-disable-next-line
     del (row) {
       this.$confirm({
-        title: '警告',
-        content: `真的要删除 ${row.no} 吗?`,
-        okText: '删除',
+        title: 'คำเตือน',
+        content: `คุณต้องการลบ ${row.no} หรือไม่?`,
+        okText: 'ยืนยัน',
         okType: 'danger',
-        cancelText: '取消',
+        cancelText: 'ยกเลิก',
         onOk () {
           console.log('OK')
           // 在这里调用删除接口
